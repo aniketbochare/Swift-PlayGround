@@ -66,7 +66,124 @@ While forced unwrapping can be useful, it destroys the safety provided by option
 //Best we havent use if-let here but used the ? to check for maybeString. Optional chaining here . Returns nil if String? = nil . This behaviour is similar to nil of Objective C where we can send messages and get nil.
 
 
-//6) Collections.
+//6) Collections. Arrays and Dictionary only primitive types.
+
+
+//Practice
+
+// var array :[Int] = [1,2,3,4,5] //Also can be declared as var array = [1,2,3,4,5] inferred or var array : Array <Int>
+
+//var array : Array <Int> = [1,2,3,4,5]
+//
+//println(array[2])
+//array.append(6)
+//array.extend(7...10)
+//
+//array.removeLast()
+//
+//array.removeAtIndex(0)
+
+//array.removeAll(keepCapacity: true)
+
+ //array.append("11") //Allowed in Objective C but not here cant mix and match.
+
+ //7) Imp - We can have NSArray like array by declaring to hold any object
+
+ //var ObjectCNSArrayType : Array <AnyObject> = [1,"2","String", 5]
+
+
+// 8) Dictionaries 
+
+// var gameLibraryDictionary = [1: "Sprite Kit", 2: "Cocos 2D", 3: "GameKit"];
+
+// var gameLibraryDictionary : [Int:String] = [1: "Sprite Kit", 2: "Cocos 2D", 3: "GameKit"];
+
+//println(gameLibraryDictionary[1])
+//
+//gameLibraryDictionary[4] = "Unity"
+//
+//println(gameLibraryDictionary)
+//
+//gameLibraryDictionary[2] = "Metal"
+//
+//println(gameLibraryDictionary)
+//
+//gameLibraryDictionary[3] = nil
+//
+//println(gameLibraryDictionary [1]) //Says Optional ("Sprite Kit")
+
+//if let value = gameLibraryDictionary [1] {
+//    println("Value is \(value)")
+//}
+
+
+// 9) References and copies
+
+//var squareDictionary = [1: 1, 2: 4, 3: 9, 4: 16]
+//
+//var dictionaryB = squareDictionary  //Here dictionary is copied
+//
+////println(squareDictionary)////println(dictionaryB)
+//
+//dictionaryB[4] = nil //Here dictionaryB is only modified.
+//
+//println(squareDictionary)//println(dictionaryB)
+
+
+
+//var arrayA = [1, 2, 3, 4, 5]
+//var arrayB = arrayA
+////println(arrayA)
+////println(arrayB)
+//
+////arrayB.removeAtIndex(0)
+//arrayB[0] = 10
+//println(arrayA)
+//println(arrayB)
+
+
+//Imp Arrays and Dictionaries both are copied during assignment which is different from Obj-C
+
+//10) Constant collections
+
+
+//let constantArray = [1,2,3,4,5]
+//
+//constantArray.append(6) //Error constant.
+//constantArray.removeAtIndex(0) //Error  constant.
+
+
+var squareDictionary = [1: "1", 2: "4", 3: "9", 4: "16"]
+
+squareDictionary.updateValue("17", forKey: 4)
+
+
+
+//squareDictionary[4] = 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
